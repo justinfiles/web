@@ -28,7 +28,7 @@
 
         .language-selector {
             position: fixed;
-            top: 20px;
+            top: 50px;
             left: 20px;
             z-index: 1000;
             background: rgba(0, 0, 0, 0.8);
@@ -140,8 +140,9 @@
         }
 
         .photo-container img {
-            max-width: 100%;
-            height: auto;
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
             border: 2px solid #00ff00;
             filter: grayscale(100%) contrast(1.2);
             transition: all 0.3s;
@@ -352,8 +353,7 @@
             </div>
             
             <div style="color: #ffd700; margin: 15px 0;">
-                💰 إجمالي العرض: 1,000,000,000 JUSTIN<br>
-                🔥 50% محروق | 📊 25% مجمع سيولة | 🎯 25% مكافآت المجتمع
+                💰 إجمالي العرض: 210,000,000,000 JUSTIN
             </div>
             
             <button class="buy-button" onclick="alert('ربط المحفظة لشراء توكن JUSTIN')">
@@ -365,9 +365,12 @@
             </button>
             
             <div style="margin-top: 20px; color: #fff;">
-                <p>📱 Telegram: @JustinFilesToken</p>
-                <p>🐦 Twitter: @JustinFilesToken</p>
-                <p>🌐 الموقع: justinfiles.com</p>
+                <p>🌐 الموقع: <a href="https://justinfiles.com" target="_blank" style="color: #00ff00; text-decoration: none;">justinfiles.com</a></p>
+                <p>💻 Git: <a href="https://github.com/justinfiles" target="_blank" style="color: #00ff00; text-decoration: none;">https://github.com/justinfiles</a></p>
+                <p>𝕏 : <a href="https://twitter.com/justinfilescom" target="_blank" style="color: #00ff00; text-decoration: none;">@justinfilescom</a></p>
+                <p>🏛️ البيت الأبيض: <a href="https://twitter.com/WhiteHouse" target="_blank" style="color: #00ff00; text-decoration: none;">@WhiteHouse</a></p>
+                <p>⚖️ SEC: <a href="https://twitter.com/SEC_News" target="_blank" style="color: #00ff00; text-decoration: none;">@SEC_News</a></p>
+                <p>📝 SEC TCR: <a href="https://www.sec.gov/tcr" target="_blank" style="color: #00ff00; text-decoration: none;">تقديم معلومات</a></p>
             </div>
         </div>
 
@@ -386,6 +389,35 @@
                 <li>📅 <span class="censored">█████</span> - <span class="censored">██████████</span></li>
             </ul>
         </div>
+
+        <div class="evidence-section">
+            <h2>🔍 تحليل الوثائق</h2>
+            <div class="leak-text" style="text-align: right;">
+                <strong>مخطط التلاعب بالسوق:</strong><br>
+                • حسابات Binance متعددة باستخدام هويات الموظفين<br>
+                • تداول غسيل الأموال المنسق لتضخيم سعر TRX بشكل اصطناعي<br>
+                • تفريغ هائل على المستثمرين التجزئة<br>
+                • الأرباح غير المشروعة المقدرة: <span class="censored">███████</span>
+            </div>
+            
+            <div class="leak-text" style="text-align: right;">
+                <strong>حالة تحقيق SEC:</strong><br>
+                • التحقيق الجاري نشط<br>
+                • تم طلب تعاون المبلغ عن المخالفات<br>
+                • الأدلة تشمل سجلات WeChat وشهادة الموظفين<br>
+                • التهم المحتملة: <span class="censored">███████████████</span>
+            </div>
+        </div>
+
+        <div class="token-info">
+            <h2 class="token-title">🎯 فائدة التوكن</h2>
+            <div style="color: #fff; text-align: right; max-width: 600px; margin: 0 auto;">
+                <p>🔒 <strong>الوصول إلى الوثائق:</strong> حاملو التوكن يحصلون على وصول حصري إلى وثائق مسربة إضافية</p>
+                <p>🗳️ <strong>حوكمة DAO:</strong> صوّت على الأدلة التي سيتم إصدارها بعد ذلك</p>
+                <p>🎁 <strong>المبلغ عن المخالفات:</strong> إذا لم تتمكن من الإبلاغ مباشرة، سيساعدك محامونا. جميع المكافآت لك.</p>
+                <p>📢 <strong>الحملة الإعلامية:</strong> امول حملات التوعية حول تلاعب سوق العملات المشفرة</p>
+            </div>
+        </div>
     </div>
 
     <div class="footer">
@@ -399,6 +431,91 @@
     </div>
 
     <script>
+        // Interactive effects
+        document.addEventListener('DOMContentLoaded', function() {
+            // Random glitch effect
+            setInterval(() => {
+                const elements = document.querySelectorAll('.glitch');
+                elements.forEach(el => {
+                    if (Math.random() > 0.8) {
+                        el.style.color = '#ff0000';
+                        setTimeout(() => {
+                            el.style.color = '#00ff00';
+                        }, 100);
+                    }
+                });
+            }, 2000);
+
+            // Typewriter effect
+            const subtitle = document.querySelector('.subtitle');
+            const text = subtitle.textContent;
+            subtitle.textContent = '';
+            let i = 0;
+            
+            function typeWriter() {
+                if (i < text.length) {
+                    subtitle.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 50);
+                }
+            }
+            
+            setTimeout(typeWriter, 1000);
+
+            // Matrix rain effect
+            const canvas = document.createElement('canvas');
+            canvas.style.position = 'fixed';
+            canvas.style.top = '0';
+            canvas.style.left = '0';
+            canvas.style.width = '100%';
+            canvas.style.height = '100%';
+            canvas.style.pointerEvents = 'none';
+            canvas.style.opacity = '0.1';
+            canvas.style.zIndex = '-1';
+            document.body.appendChild(canvas);
+
+            const ctx = canvas.getContext('2d');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            const matrix = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%+-/~{[|`]}";
+            const matrixArray = matrix.split("");
+
+            const fontSize = 10;
+            const columns = canvas.width / fontSize;
+
+            const drops = [];
+            for(let x = 0; x < columns; x++) {
+                drops[x] = 1;
+            }
+
+            function drawMatrix() {
+                ctx.fillStyle = 'rgba(0, 0, 0, 0.04)';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+                ctx.fillStyle = '#00ff00';
+                ctx.font = fontSize + 'px monospace';
+
+                for(let i = 0; i < drops.length; i++) {
+                    const text = matrixArray[Math.floor(Math.random() * matrixArray.length)];
+                    ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+                    if(drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                        drops[i] = 0;
+                    }
+                    drops[i]++;
+                }
+            }
+
+            setInterval(drawMatrix, 35);
+
+            // Resize handler
+            window.addEventListener('resize', () => {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            });
+        });
+
         // Language switching function
         function changeLanguage(lang) {
             const languageMap = {

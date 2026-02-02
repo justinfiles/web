@@ -27,7 +27,7 @@
 
         .language-selector {
             position: fixed;
-            top: 20px;
+            top: 50px;
             right: 20px;
             z-index: 1000;
             background: rgba(0, 0, 0, 0.8);
@@ -139,8 +139,9 @@
         }
 
         .photo-container img {
-            max-width: 100%;
-            height: auto;
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
             border: 2px solid #00ff00;
             filter: grayscale(100%) contrast(1.2);
             transition: all 0.3s;
@@ -351,8 +352,7 @@
             </div>
             
             <div style="color: #ffd700; margin: 15px 0;">
-                💰 Gesamtangebot: 1,000,000,000 JUSTIN<br>
-                🔥 50% Verbrannt | 📊 25% Liquiditätspool | 🎯 25% Community-Belohnungen
+                💰 Gesamtangebot: 210,000,000,000 JUSTIN
             </div>
             
             <button class="buy-button" onclick="alert('Wallet verbinden um JUSTIN-Token zu kaufen')">
@@ -364,9 +364,12 @@
             </button>
             
             <div style="margin-top: 20px; color: #fff;">
-                <p>📱 Telegram: @JustinFilesToken</p>
-                <p>🐦 Twitter: @JustinFilesToken</p>
-                <p>🌐 Website: justinfiles.com</p>
+                <p>🌐 Website: <a href="https://justinfiles.com" target="_blank" style="color: #00ff00; text-decoration: none;">justinfiles.com</a></p>
+                <p>💻 Git: <a href="https://github.com/justinfiles" target="_blank" style="color: #00ff00; text-decoration: none;">https://github.com/justinfiles</a></p>
+                <p>𝕏 : <a href="https://twitter.com/justinfilescom" target="_blank" style="color: #00ff00; text-decoration: none;">@justinfilescom</a></p>
+                <p>🏛️ Weißes Haus: <a href="https://twitter.com/WhiteHouse" target="_blank" style="color: #00ff00; text-decoration: none;">@WhiteHouse</a></p>
+                <p>⚖️ SEC: <a href="https://twitter.com/SEC_News" target="_blank" style="color: #00ff00; text-decoration: none;">@SEC_News</a></p>
+                <p>📝 SEC TCR: <a href="https://www.sec.gov/tcr" target="_blank" style="color: #00ff00; text-decoration: none;">Zeuge Senden</a></p>
             </div>
         </div>
 
@@ -385,6 +388,35 @@
                 <li>📅 <span class="censored">█████</span> - <span class="censored">██████████</span></li>
             </ul>
         </div>
+
+        <div class="evidence-section">
+            <h2>🔍 Dokumentenanalyse</h2>
+            <div class="leak-text">
+                <strong>Marktmanipulationsschema:</strong><br>
+                • Mehrere Binance-Konten mit Mitarbeiteridentitäten<br>
+                • Koordinierter Wash Trading zur künstlichen Inflation des TRX-Preises<br>
+                • Großangelegter Dumping auf Kleinanleger<br>
+                • Geschätzte illegale Gewinne: <span class="censored">███████</span>
+            </div>
+            
+            <div class="leak-text">
+                <strong>SEC-Untersuchungsstatus:</strong><br>
+                • Aktive Untersuchung läuft<br>
+                • Whistleblower-Kooperation angefordert<br>
+                • Beweise umfassen WeChat-Aufzeichnungen und Mitarbeiterzeugenaussagen<br>
+                • Mögliche Anklagen: <span class="censored">███████████████</span>
+            </div>
+        </div>
+
+        <div class="token-info">
+            <h2 class="token-title">🎯 Token-Nutzen</h2>
+            <div style="color: #fff; text-align: left; max-width: 600px; margin: 0 auto;">
+                <p>🔒 <strong>Dokumentenzugriff:</strong> Token-Inhaber erhalten exklusiven Zugriff auf zusätzliche geleakte Dokumente</p>
+                <p>🗳️ <strong>DAO-Governance:</strong> Stimmen Sie über Beweise ab, die als Nächstes veröffentlicht werden sollen</p>
+                <p>🎁 <strong>Whistleblower:</strong> Wenn Sie nicht direkt melden können, helfen unsere Anwälte Ihnen. Alle Belohnungen gehören Ihnen.</p>
+                <p>📢 <strong>Medienkampagne:</strong> Finanzieren Sie Aufklärungskampagnen über Kryptomarktmanipulation</p>
+            </div>
+        </div>
     </div>
 
     <div class="footer">
@@ -398,6 +430,91 @@
     </div>
 
     <script>
+        // Interactive effects
+        document.addEventListener('DOMContentLoaded', function() {
+            // Random glitch effect
+            setInterval(() => {
+                const elements = document.querySelectorAll('.glitch');
+                elements.forEach(el => {
+                    if (Math.random() > 0.8) {
+                        el.style.color = '#ff0000';
+                        setTimeout(() => {
+                            el.style.color = '#00ff00';
+                        }, 100);
+                    }
+                });
+            }, 2000);
+
+            // Typewriter effect
+            const subtitle = document.querySelector('.subtitle');
+            const text = subtitle.textContent;
+            subtitle.textContent = '';
+            let i = 0;
+            
+            function typeWriter() {
+                if (i < text.length) {
+                    subtitle.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 50);
+                }
+            }
+            
+            setTimeout(typeWriter, 1000);
+
+            // Matrix rain effect
+            const canvas = document.createElement('canvas');
+            canvas.style.position = 'fixed';
+            canvas.style.top = '0';
+            canvas.style.left = '0';
+            canvas.style.width = '100%';
+            canvas.style.height = '100%';
+            canvas.style.pointerEvents = 'none';
+            canvas.style.opacity = '0.1';
+            canvas.style.zIndex = '-1';
+            document.body.appendChild(canvas);
+
+            const ctx = canvas.getContext('2d');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            const matrix = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%+-/~{[|`]}";
+            const matrixArray = matrix.split("");
+
+            const fontSize = 10;
+            const columns = canvas.width / fontSize;
+
+            const drops = [];
+            for(let x = 0; x < columns; x++) {
+                drops[x] = 1;
+            }
+
+            function drawMatrix() {
+                ctx.fillStyle = 'rgba(0, 0, 0, 0.04)';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+                ctx.fillStyle = '#00ff00';
+                ctx.font = fontSize + 'px monospace';
+
+                for(let i = 0; i < drops.length; i++) {
+                    const text = matrixArray[Math.floor(Math.random() * matrixArray.length)];
+                    ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+                    if(drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                        drops[i] = 0;
+                    }
+                    drops[i]++;
+                }
+            }
+
+            setInterval(drawMatrix, 35);
+
+            // Resize handler
+            window.addEventListener('resize', () => {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            });
+        });
+
         // Language switching function
         function changeLanguage(lang) {
             const languageMap = {
